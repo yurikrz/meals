@@ -5,10 +5,12 @@ import { MealService } from './meal.service.js';
 export const validateExistMeal = catchAsync(async (req, res, next) => {
   const { id } = req.params;
 
-  const meal = await MealService.findOne(id);
+  let mealId = id || req.body.mealId;
+
+  const meal = mealId ? await MealService.findOne(mealId) : null;
 
   if (!meal) {
-    return next(new AppError(`Meal with id: ${id} not found`));
+    return next(new AppError(`Meal with id: ${mealId} not found`));
   }
 
   req.meal = meal;

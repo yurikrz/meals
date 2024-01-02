@@ -26,4 +26,8 @@ export const Meal = sequelize.define('meals', {
     allowNull: false,
     defaultValue: true,
   },
+  photo: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
 });
