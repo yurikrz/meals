@@ -13,7 +13,7 @@ https://documenter.getpostman.com/view/29235177/2s9YsFDtUp
 
 ## Extras
 
-En el modulo de Meal agregue la funcionalidad para almacenar una foto del plato al momento de crear el meal, ademas la foto puede ser cambiada en el endpoint de actualizar el meal.
+En el modulo de Meal agregue la funcionalidad para almacenar una foto del plato al momento de crear el meal, ademas la foto puede ser cambiada en el endpoint de actualizar el meal. Además implemente los middleware de seguridad visto en clases (hpp, limitRequest, helmet y sanitizer)
 
 ## Requisitos Previos
 
