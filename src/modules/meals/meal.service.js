@@ -37,7 +37,6 @@ export class MealService {
   }
 
   static async create(data) {
-    console.log(data);
     return await Meal.create(data);
   }
 

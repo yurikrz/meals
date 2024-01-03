@@ -100,7 +100,7 @@ export const findUserOrders = catchAsync(async (req, res, next) => {
   const { sessionUser } = req;
 
   const orders = await UserService.findAllUserOrder(sessionUser.id);
-  return res.status(201).json(orders.orders);
+  return res.status(201).json(orders);
 });
 
 export const findOneOrder = catchAsync(async (req, res, next) => {
@@ -113,5 +113,5 @@ export const findOneOrder = catchAsync(async (req, res, next) => {
     return next(new AppError(`Order ${id} not found for this user`, 401));
   }
 
-  return res.status(201).json(order.orders);
+  return res.status(201).json(order);
 });
